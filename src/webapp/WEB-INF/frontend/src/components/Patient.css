@@ -1,0 +1,49 @@
+.container {
+    max-height: 80vh; /* Limit the height of the container to 80% of the viewport height */
+    overflow-y: auto; /* Allow vertical scrolling */
+    margin-top: 15px;
+}
+
+.card {
+    max-height: 100%; /* Ensure the card takes up the full height of the container */
+    overflow-y: auto; /* Scroll inside the card */
+    padding: 20px;
+}
+
+.card-body {
+    overflow-y: auto; /* Ensures scrolling works even within the card-body */
+}
+
+
+/* Hide the default arrow and add a custom down arrow */
+.custom-select {
+    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none; /* For Firefox */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16'%3E%3Cpath fill='black' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    padding-right: 30px; /* Space for arrow */
+}
+
+/* Adjust the dropdown width when focused */
+.custom-input:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.cancel-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    /* width: 75px; */
+}
+
+.submit-button {
+    position: relative;
+    float: right;
+}
+

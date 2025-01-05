@@ -1,0 +1,97 @@
+/* Add these styles to make columns resizable */
+.table th {
+    position: relative;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.table th.resizing {
+    background-color: #f1f1f1;
+}
+
+.table td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.search-container {
+    margin-bottom: 7.5px;
+    float: right;
+    margin-right: 10px;
+}
+
+.search-container button {
+    margin-left: 10px;
+}
+
+.error-message {
+    color: red;
+    margin: 10px 0;
+}
+
+.filter-item {
+    display: flex;
+    align-items: center;
+    padding: 5px; /* Add some padding for better spacing */
+    background-color: #e0e0e0;
+    float: right;
+}
+
+.filter-item:hover{
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+#filter-button {
+    /* margin-left: 63.76%; */
+    float:right;
+}
+
+#filter-labels {
+    margin-left: 10px;
+}
+
+.table-container {
+    max-height: 565px; /* Adjust the height as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: auto; /* Enable horizontal scrolling if necessary */
+    overflow-anchor:auto;
+    border: 1px solid #ddd; /* Optional: Add a border around the table */
+    padding: 5px; /* Optional: Add some padding */
+}
+
+.table-container thead th {
+    position: sticky;
+    top: -10px;
+}
+
+.filter-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2px;
+    margin-top: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    position: relative; /* Allow absolute positioning for child elements */
+}
+
+.filter-buttons-container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px; /* Space between the buttons */
+}
+
+.select-all-button,
+.unselect-all-button {
+    height: fit-content;
+    /* padding: 8px 12px; */
+    width: fit-content;
+}
+
+
