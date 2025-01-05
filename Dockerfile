@@ -12,7 +12,7 @@ RUN ./mvnw dependency:go-offline
 RUN ./mvnw package -DskipTests
 
 # Copy the JAR file
-COPY target/patients-0.0.1-SNAPSHOT.jar.original app.jar
+COPY target/patients-0.0.1-SNAPSHOT.jar app.jar
 
 # Command to run the application
 CMD ["java", "-jar", "app.jar"]
