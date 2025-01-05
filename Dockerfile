@@ -7,9 +7,11 @@ WORKDIR /app
 COPY .mvn/ .mvn
 COPY mvnw pom.xml ./
 
-# Build the application
-RUN ./mvnw dependency:go-offline
-RUN ./mvnw package -DskipTests
+# Build the application with more output
+RUN echo "Running Maven build..." && ./mvnw clean install -DskipTests
+
+# List files in target directory for verification
+RUN ls -l target
 
 # Copy the JAR file
 COPY target/patients-0.0.1-SNAPSHOT.jar app.jar
