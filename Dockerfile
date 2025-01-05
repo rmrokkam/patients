@@ -7,14 +7,11 @@ WORKDIR /app
 COPY .mvn/ .mvn
 COPY mvnw pom.xml ./
 
-# Build the application with more output
-RUN echo "Running Maven build..." && ./mvnw clean install -DskipTests
+# Run Maven to install dependencies and build the project
+RUN ./mvnw clean install -DskipTests
 
-# List files in target directory for verification
-RUN ls -l target
-
-# Copy the JAR file
+# Copy the JAR file into the container
 COPY target/patients-0.0.1-SNAPSHOT.jar app.jar
 
-# Command to run the application
+# Run the application
 CMD ["java", "-jar", "app.jar"]
