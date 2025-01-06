@@ -7,9 +7,6 @@ WORKDIR /app
 COPY mvnw pom.xml ./
 COPY .mvn/ .mvn
 
-# Ensure the Maven wrapper script has execution permissions
-RUN chmod +x mvnw
-
 # Run Maven to install dependencies and build the project
 RUN ./mvnw clean install -DskipTests
 
